@@ -11,14 +11,14 @@ categories: Tools
 
 一个折腾了半天的问题。 启动Jekyll serve是提示
 
-```sh
+{% highlight sh linenos %}
  Liquid Exception: No such file or directory - C:\Windows\system32\cmd.exe in _posts/2014-02-04-welcome-to-jekyll.markdown
-```
+{% endlhighlight %}
 
 在github上找到办法异常简单：
 
-```sh
+{% highlight sh linenos %}
 export COMSPEC=C:\Windows\system32\cmd.exe
-```
+{% endlhighlight %}
 
 将此变量设置到~/.bashrc中就OK了！
