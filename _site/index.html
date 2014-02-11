@@ -1,51 +1,572 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>无他，记录耳</title>
-        <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">人生工作，涓涓长流，点点滴滴</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>Rasmus Andersson</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
-      <li><span>08 Feb 2014</span> &raquo; <a href="/tools/2014/02/08/First-blog-based-on-github-and-jekyll.html">第一份基于Github——Jekyll的Blog</a></li>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-  </ul>
+    <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="screen, projection" href="/css/screen.css" type="text/css">
+    <link rel="stylesheet" media="print" href="/css/print.css" type="text/css">
+    <link rel="alternate" type="application/atom+xml" title="Rasmus Andersson" href="http://feeds.feedburner.com/hunch">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/res/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/res/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/res/apple-touch-icon-114x114-precomposed.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@rsms">
+    
+    <meta property="fb:admins" content="728642302">
+    <meta property="fb:app_id" content="38027689216">
+    
+      <meta name="description" content="Ramblings by Rasmus Andersson -- a Swedish designer with a passion for technology">
+    
+    
+    
+    
+    <meta property="og:url" content="http://rsms.me/">
+    <meta property="og:site_name" content="rsms.me">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_GB" />
+    
+    
+    <script>
+  //html { zoom:50%; }
+  if (window.addEventListener) {
+    var sidebarAdjustTimer;
+    function updateOrientation(orientationChangeEvent) {
+      if (sidebarAdjustTimer) clearInterval(sidebarAdjustTimer);
+      //console.log('window.orientation -> '+window.orientation);
+      if (window.orientation === -90 || window.orientation === 90) {
+        // landscape
+        var sidebar = document.getElementById('sidebar');
+        if (!sidebar.src || sidebar.src === '') {
+          sidebar.src = '/archive/sidebar.html';
+        }
+        sidebarAdjustTimer = setInterval(function() {
+          var height = Math.round(document.height * 1.6);
+          if (sidebar.height != height) {
+            sidebar.height = height;
+            sidebar.style.height = height + 'px';
+          }
+        },500);
+      } else {
+        // portrait
+      }
+    }
+    window.addEventListener('orientationchange', updateOrientation);
+    document.addEventListener('DOMSubtreeModified', function(ev) {
+      if (document.getElementById('sidebar')) {
+        document.removeEventListener('DOMSubtreeModified', arguments.callee);
+        updateOrientation();
+      }
+    });
+  }
+</script>
+    
+    
+  </head>
+  <body>
+    <!--script>/*
+      var s;
+      if (document.location.hostname === 'rsms.me') {
+        s = document.createElement('script');
+        s.async = true;
+        s.src = "http://connect.facebook.net/en_US/all.js#appId=38027689216&xfbml=1";
+        document.getElementsByTagName('head')[0].appendChild(s);
+      }
+      
+      if (window.navigator.userAgent.indexOf('iPad') != -1) {
+        document.documentElement.className = 'ios ipad';
+        window.rsmsHostIsIOS = 'ipad';
+      } else if (window.navigator.userAgent.indexOf('iPhone') != -1) {
+        document.documentElement.className = 'ios iphone';
+        window.rsmsHostIsIOS = 'iphone';
+      }
+    */</script>
+    <div id="fb-root"></div><script></script-->
+    <iframe id="sidebar"></iframe>
+    <header>
+      <h1 class="logo" onclick="document.location.href='/';"><a href="/"><img src="/res/signature-2-2.png" width="160" height="50" alt="Signature"></a></h1>
+      <ul class="navigation">
+        <li><a href="/photos/" title="A selection of recent photography">Photography</a></li>
+        <li><a href="/projects/" title="Projects I am or was involved in">Projects</a></li>
+        <li><a href="/archive/" title="Archived articles">Archive</a></li>
+        <li><a href="/about/">About me</a></li>
+      </ul>
+    </header>
+    <!--div class="wrapper content"-->
+      <!-- <div class="content full-bleed intro">
+  Welcome to my homepage!!1
+</div> -->
+<div class="posts">
+  <div class="content full-bleed" id="recent-posts">
+  <a
+    href="/2014/02/08/First-blog-based-on-github-and-jekyll.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">第一份基于Github——Jekyll的Blog</div>
+      
+        <!-- <div class="title">第一份基于Github——Jekyll的Blog</div> -->
+        <info datetime="">
+          Feb 2014
+        </info>
+        
+        <span class="body">经过几个小时的摸索终于开始搭建基于github page的blog。之前在wordpress等地也安家过，一方面wordpress的几次改版搞得身心疲惫，同时自己也未能坚持，反而通过evernote倒是有一些日常积累。在不用翻墙的今天，痛定思痛，正儿八经的给自己找个安家之处。
+
+总得说来在windows上搭建这个平台实属不易，尤其是作为一个伪Linux爱好者，还是通过cygwin做了一层封转，不过磕磕碰碰总算整出来了。
+
+一个折腾了半天的问题。 启动Jekyll serve是提示
+
+ Liquid Exception: No such file or directory - C:\Windows\system32\cmd.exe in _posts/2014-02-04-welcome-to-jekyll.markdown
+
+
+在github上找到办法异常简单：
+
+export COMSPEC=C:\Windows\system32\cmd.exe
+
+
+将此变量设置到~/.bashrc中就OK了！
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2013/07/09/dbx2013.html" class="post-excerpt photo">
+      <div class="padded-content">
+        <div class="title">DBX 2013</div>
+      
+        <div class="image" style="background-image:url('http://farm8.staticflickr.com/7451/9254559408_c34e7b9304_c.jpg')"></div>
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2013/03/21/hello-dropbox.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Hello, Dropbox</div>
+      
+        <!-- <div class="title">Hello, Dropbox</div> -->
+        <info datetime="">
+          Mar 2013
+        </info>
+        
+        <span class="body">I'm very excited to let you know that I'm joining Dropbox. After two years at Facebook I couldn't be more proud. Proud to have been part of something as important as Facebook and proud of the work I've done with shaping the future of mobile communication. It's truly been a fantastic time of my life. At Dropbox I'm going to work hard to make all our lives better. Remove friction from technical details in our modern daily lives, and relieve us from worrying about our 'stuff' — from quick snapshots and hasty notes to precious memories.</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2013/01/01/1950s-called-wanted-toolbox-back.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">The 1950s called and wanted their toolbox back</div>
+      
+        <!-- <div class="title">The 1950s called and wanted their toolbox back</div> -->
+        <info datetime="">
+          Jan 2013
+        </info>
+        
+        <span class="body">Your favourite fancy-pants modern programming language is from the 1950s. Pretty much any programming language used today is a derivative of Fortran or Lisp, both born in the 1950s. Okay, reality check: It’s 2013—yes, 60 years later—and we have cars that drive themselves on the street, robots roaming the surface of alien planets and tiny networked devices with interactive surfaces that we keep in our pockets, which are orders of magnitude more powerful than the computers of the 1950s.</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2012/10/14/sol-a-sunny-little-virtual-machine.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Sol — a sunny little virtual machine</div>
+      
+        <!-- <div class="title">Sol — a sunny little virtual machine</div> -->
+        <info datetime="">
+          Oct 2012
+        </info>
+        
+        <span class="body">During this weekend, together with a few evenings earlier this week, I created a rather simple virtual machine dubbed Sol, after the Swedish word for sun. It's register based with multitasking and timers.</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2012/10/07/mylang-tutorial1.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Our own little computer language</div>
+      
+        <!-- <div class="title">Our own little computer language</div> -->
+        <info datetime="">
+          Oct 2012
+        </info>
+        
+        <span class="body">A tutorial to writing our own programming language</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2012/05/29/hue-factorial-fib.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Factorial and Fib in Hue</div>
+      
+        <!-- <div class="title">Factorial and Fib in Hue</div> -->
+        <info datetime="">
+          May 2012
+        </info>
+        
+        <span class="body">The 'Hello World' of functional programming, in Hue</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2012/05/14/hue.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Hue — a functional programming language for fun & play</div>
+      
+        <!-- <div class="title">Hue — a functional programming language for fun & play</div> -->
+        <info datetime="">
+          May 2012
+        </info>
+        
+        <span class="body">One of my latest hobby projects that didn't die after a week — a functional programming language where everything's an expression.</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2012/03/31/peertalk.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">PeerTalk — hug it out over USB</div>
+      
+        <!-- <div class="title">PeerTalk — hug it out over USB</div> -->
+        <info datetime="">
+          Mar 2012
+        </info>
+        
+        <span class="body">A small iOS and OS X Cocoa library for communicating over USB and TCP</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2011/10/16/uilayer.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Working with WebKit as a UI compositing engine</div>
+      
+        <!-- <div class="title">Working with WebKit as a UI compositing engine</div> -->
+        <info datetime="">
+          Oct 2011
+        </info>
+        
+        <span class="body">UILayer provides a JavaScript API on top of WebKit for working with the concept of layers. Instead of manipulating DOM elements using a myriad of mixed concepts, you go though a single, well defined API.</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2008/12/02/peace-love-spotify.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Peace & Love & Spotify</div>
+      
+        <!-- <div class="title">Peace & Love & Spotify</div> -->
+        <info datetime="">
+          Dec 2008
+        </info>
+        
+        <span class="body">
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2005/01/11/historys-first-mac-rumor.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">historys first mac rumor</div>
+      
+        <!-- <div class="title">historys first mac rumor</div> -->
+        <info datetime="">
+          Jan 2005
+        </info>
+        
+        <span class="body">This is claimed to be the first mac/apple rumor in history: http://groups-beta.google.co&hellip;5f11c023dd4. My eyes get all teary. Snyft.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2005/01/09/welcome-isak.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">welcome Isak</div>
+      
+        <!-- <div class="title">welcome Isak</div> -->
+        <info datetime="">
+          Jan 2005
+        </info>
+        
+        <span class="body">BIG gratulations to Christian &#38; Rosita and their new family member Isak! Woho!!
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/12/11/a-little-catch-up.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">a little catch-up</div>
+      
+        <!-- <div class="title">a little catch-up</div> -->
+        <info datetime="">
+          Dec 2004
+        </info>
+        
+        <span class="body">I haven&rsquo;t written anything here for a month. That&rsquo;s bad, right? What have I been up to then? Alot of things, one of them beeing the development of this little http server. Working together with Andreas who&rsquo;s giving me some c++-skills. Oh, that&rsquo;s nice. I&rsquo;ve also completed two more flash demos for SIS. Made some progress om my new semi-CMS Fuse, wich will be available jan~june 2005.
+
+I recently came across this article about ICA (primarily a big food-company) importing and selling Levi&rsquo;s. Wow.
+
+Who doesn&rsquo;t love Anna Ternheims music? Well, everyone, have a look at this. And, a new version of Andreas &#38; Stoffes creation Spelnyheter was let of it&rsquo;s cage yesterday. BTW, Anna Kraitz is kool.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/11/13/andreas-bostrom.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">andreas boström</div>
+      
+        <!-- <div class="title">andreas boström</div> -->
+        <info datetime="">
+          Nov 2004
+        </info>
+        
+        <span class="body">Take a look and listen to singer/songwriter Andreas Boström. He&rsquo;s the man!
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/11/05/milky-feeling.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">milky feeling</div>
+      
+        <!-- <div class="title">milky feeling</div> -->
+        <info datetime="">
+          Nov 2004
+        </info>
+        
+        <span class="body">Milk dock icons for Adium updated to version 1.2. Weeho! Tomorrow is that scary day. Keep an eye over your shoulder&hellip;buuuh. eh. whatever.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/10/27/gta-for-nintendo-8-bit.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">GTA for nintendo 8-bit</div>
+      
+        <!-- <div class="title">GTA for nintendo 8-bit</div> -->
+        <info datetime="">
+          Oct 2004
+        </info>
+        
+        <span class="body">This dude is fucking hardcore! He&rsquo;s porting Grand Theft Auto 3 to Nintendo 8-bit! Assembly-level. Gosh. I MUST keep an eye on this project!
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/10/22/bruhn-sydsvenskan.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">Bruhn + Sydsvenskan</div>
+      
+        <!-- <div class="title">Bruhn + Sydsvenskan</div> -->
+        <info datetime="">
+          Oct 2004
+        </info>
+        
+        <span class="body">Peter Bruhn made a beautiful work with Aachen for Sydsvenskan. No fresh news, but well worth checking out.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/10/20/news-from-formac.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">News from Formac</div>
+      
+        <!-- <div class="title">News from Formac</div> -->
+        <info datetime="">
+          Oct 2004
+        </info>
+        
+        <span class="body">Today Formac announced their new line of TFT-displays. They are called Gallery Extreme and comes in two flavors; 19 and 20 inch.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a><a
+    href="/2004/10/15/xml-service.html" class="post-excerpt">
+      <div class="padded-content">
+        <div class="title">xml service</div>
+      
+        <!-- <div class="title">xml service</div> -->
+        <info datetime="">
+          Oct 2004
+        </info>
+        
+        <span class="body">Here&rsquo;s a great tool to start with when setting up xml services in php: XmlService Wrote it yesterday.
+</span>
+        
+      <!-- post.photo_url -->
+      </div>
+    </a>
+    <div class="breaker"></div>
+    <div class="end">
+      <a href="/archive/">More...</a>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+(function(f){
+  var onload = function(f) {
+    if (window.addEventListener) {
+      window.addEventListener('DOMContentLoaded', f, false);
+    } else {
+      window.attachEvent('onload', f);
+    }
+  };
+  onload(function(){
+    f();
+    if (window.addEventListener) {
+      window.addEventListener('resize', f, false);
+    } else {
+      window.attachEvent('resize', f);
+    }
+  });
+})(function(){
+  var winw = window.innerWidth, w; //, width_thresholds = [680, 780];
+  w = window.__post_grid_width;
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                ScottWu<br />
-                中老年程序员及架构师<br />
-                scopic78@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://occamrazor.github.io">occamrazor.github.io</a><br />
-                
-              </p>
-            </div>
-          </div>
-        </div>
+  if ( (w !== undefined) &&
+       ( (w === 680 && winw < 680) ||
+         (w === 780 && winw >= 680 && winw < 780) ||
+         (w === 10000 && winw >= 780)
+       )
+     )
+  {
+    // console.log('noop w:', w+ ', winw:', winw);
+    return;
+  } else {
+    window.__post_grid_width = w =
+      winw > 780 ? 10000 :
+      winw > 680 ? 780 :
+                   680;
+    // console.log('op w:', w);
+  }
 
-    </body>
+  var posts = document.getElementById('recent-posts');
+  var child_nodes = posts.childNodes, k, node, h,
+      col_width, col0_y, col1_y, col1_x,
+      origin = {x:0, y:0}, node_count = 0, is_col0, row0_max_y;
+
+  posts.style.position = (window.__post_grid_width <= 680) ? null : 'relative';
+
+  for (k in child_nodes) {
+    node = child_nodes[k];
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      if (node.className === 'breaker') {
+        if (window.__post_grid_width <= 680) {
+          node.style.height = null;
+        } else {
+          node.style.height = (Math.max(col0_y, col1_y) - row0_max_y) + 'px';
+        }
+        break;
+      }
+      if (col0_y === undefined) {
+        origin.x = node.offsetLeft;
+        origin.y = node.offsetTop;
+        col_width = node.clientWidth;
+        col0_y = origin.y + node.clientHeight;
+        row0_max_y = col0_y;
+      } else {
+        if (col1_y === undefined) {
+          col1_y = origin.y + node.clientHeight;
+          col1_x = origin.x + node.clientWidth;
+          if (col1_y > row0_max_y) {
+            row0_max_y = col1_y;
+          }
+        } else {
+          if (window.__post_grid_width <= 680) {
+            // console.log('Clear');
+            node.style.position = null;
+            node.style.width = null;
+            node.style.left = null;
+            node.style.top = null;
+          } else {
+            is_col0 = (node_count % 2) === 0;
+            node.style.position = 'absolute';
+            node.style.width = col_width + 'px';
+            if (is_col0) {
+              node.style.left = origin.x + 'px';
+              node.style.top = col0_y + 'px';
+              col0_y += node.clientHeight;
+            } else {
+              node.style.left = col1_x + 'px';
+              node.style.top = col1_y + 'px';
+              col1_y += node.clientHeight;
+            }
+          }
+          // console.dir(node);
+        }
+      }
+      ++node_count;
+    }
+  }
+
+});
+</script>
+
+    <!--/div-->
+    
+    
+    
+    
+    
+    
+    <footer>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US" class="cc"><img src="/res/cc-cc.png" class="cc">
+        <img src="/res/cc-by.png" class="cc"></a>
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons License</a>
+      </p>
+    </footer>
+    
+    
+    <script>
+  // curry pre < code to be able to get prettified
+  // If the first line is
+  //   #!-langname\n
+  // Then that line is removed from the code and "langname" is given to prettify.
+  // If "langname" is "none", that prettify is not applied at all.
+  var n,i,L,cn,lang,v = document.getElementsByTagName('pre');
+  var m,lang_re = /^#\!-([a-zA-Z0-9_-]+)\n/;
+  for (i=0,L=v.length;i<L;++i) {
+    n = v.item(i);
+    if ((cn = n.firstChild) && cn.nodeName == 'CODE') {
+      lang = null;
+      if (cn.firstChild.nodeType === Node.TEXT_NODE) {
+        m = lang_re.exec(cn.firstChild.nodeValue);
+        if (m) {
+          lang = m[1].toLowerCase();
+          cn.firstChild.nodeValue = cn.firstChild.nodeValue.substr(m[0].length);
+          if (lang === 'none') {
+            continue;
+          }
+        }
+      }
+      n.setAttribute('class', 'prettyprint'+(lang ? ' lang-' + lang : ''));
+      n.getAttribute('class').setAttribute('style','overflow:auto');
+    }
+  }
+</script>
+<script async src="/scripts/prettify/prettify.js"></script>
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9078556-2']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </body>
 </html>

@@ -1,28 +1,11 @@
-name: 人生工作，涓涓长流，点点滴滴
-markdown: redcarpet
-destination: ./_site
-plugins:     ./_plugins
-layouts:     ./_layouts
-include:     ['.htaccess']
-exclude:     []
-keep_files:  ['.git','.svn']
-gems:        []
-timezone:    America/Montreal
-encoding:    UTF-8
-
-future:      true
-show_drafts: nil
-limit_posts: 0
-pygments:    true
-relative_permalinks: true
-permalink:     date
-paginate_path: 'page:num'
-excerpt_separator: "\n\n"
-safe:        false
-host:        0.0.0.0
-port:        4000
-baseurl:     /
-url:         http://localhost:4000
-lsi:         false
-redcarpet:
-  extensions: []
+port: 3000
+pygments: false
+lsi: false
+permalink: /:year/:month/:day/:title.html
+# paginate: 50
+markdown: rdiscount
+# enables SmartyPants (nice curly quotation marks, em/en dashes, elipses, etc):
+rdiscount:
+  extensions: [smart]
+# Since GH pages override this to "true", we test this value to see if we are running locally
+safe: false

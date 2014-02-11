@@ -13,12 +13,12 @@ categories: Tools
 
 {% highlight sh linenos %}
  Liquid Exception: No such file or directory - C:\Windows\system32\cmd.exe in _posts/2014-02-04-welcome-to-jekyll.markdown
-{% endlhighlight %}
+{% endhighlight %}
 
 在github上找到办法异常简单：
 
 {% highlight sh linenos %}
 export COMSPEC=C:\Windows\system32\cmd.exe
-{% endlhighlight %}
+{% endhighlight %}
 
 将此变量设置到~/.bashrc中就OK了！
