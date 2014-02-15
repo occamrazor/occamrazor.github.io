@@ -15,16 +15,15 @@
     <link rel="apple-touch-icon-precomposed" href="/res/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/res/apple-touch-icon-{% if page.ios_app_name %}{{page.ios_app_name}}-{% endif %}72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/res/apple-touch-icon-114x114-precomposed.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@rsms">
-    <meta name="weibo:name" content="@scottwu">
+    <meta name="twitter:site" content="@ewuzhou">
+    <meta name="weibo:name" content="@Scott-Wu">
+    <meta name="facebook:name" content="@ewuzhou">
     <meta name="wechat:name" content="@wxid-scottwu">
     {% if page.ios_app_name %}
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     {% endif %}
-    <meta property="fb:admins" content="728642302">
-    <meta property="fb:app_id" content="38027689216">
+
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}">
       {% if page.description %}
@@ -35,7 +34,7 @@
       <meta name="og:description" content="{{ content | strip_html | truncatewords: 25 }}">
       {% endif %}
     {% else %}
-      <meta name="description" content="Ramblings by Rasmus Andersson -- a Swedish designer with a passion for technology">
+      <meta name="description" content="Scott Wu -- 一个苦逼的中老年程序员，寻求全新的人生中">
     {% endif %}
     {% if page.og_image_url %}
     <meta property="og:image" content="{{ page.og_image_url }}">
